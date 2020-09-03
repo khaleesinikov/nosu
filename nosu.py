@@ -33,9 +33,7 @@ def remove_files(path: str, extensions: List[str]):
 
 def main():
     path = input("Path to osu! songs folder: ")
-    extensions = input("File extensions to remove: ").split(",")
-    for ext in extensions:
-        ext.strip()
+    extensions = input("File extensions to remove: ").split(" ")
 
     if exists(path):
         if isdir(path):
